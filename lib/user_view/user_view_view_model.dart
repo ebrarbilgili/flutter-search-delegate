@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:search_delegate_demo/service.dart';
+import 'package:search_delegate_demo/core/service/service.dart';
 import 'package:search_delegate_demo/user_model.dart';
 import './user_view.dart';
 

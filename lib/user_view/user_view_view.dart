@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:search_delegate_demo/search.dart';
+import 'package:search_delegate_demo/core/search/search.dart';
+import 'package:search_delegate_demo/core/widget/listview.dart';
 import './user_view_view_model.dart';
 
 class UserViewView extends UserViewViewModel {
@@ -7,26 +8,7 @@ class UserViewView extends UserViewViewModel {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: buildListView(),
-    );
-  }
-
-  ListView buildListView() {
-    return ListView.builder(
-      itemCount: list.length,
-      itemBuilder: (BuildContext context, int index) {
-        return buildCard(index);
-      },
-    );
-  }
-
-  Card buildCard(int index) {
-    final user = list[index];
-    return Card(
-      child: ListTile(
-        leading: Text(user.id.toString()),
-        title: Text(user.name ?? 'user'),
-      ),
+      body: ListViewWidget(list: list),
     );
   }
 
@@ -38,7 +20,7 @@ class UserViewView extends UserViewViewModel {
           onPressed: () {
             showSearch(
               context: context,
-              delegate: UserSearch(allUsers: list, usersSuggestions: list),
+              delegate: UserSearch(users: list),
             );
           },
           icon: Icon(Icons.search),
