@@ -1,7 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:search_delegate_demo/user_model.dart';
+
+import '../../user_view/model/user_model.dart';
 
 class UserService {
   final Dio service;

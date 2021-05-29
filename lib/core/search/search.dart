@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:search_delegate_demo/core/widget/listview.dart';
 
-import 'package:search_delegate_demo/user_model.dart';
+import '../../user_view/model/user_model.dart';
+import '../widget/listview.dart';
 
 class UserSearch extends SearchDelegate<UserModel> {
   final List<UserModel> users;

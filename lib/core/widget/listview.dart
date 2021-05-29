@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:search_delegate_demo/user_model.dart';
+import '../../user_view/model/user_model.dart';
 
 class ListViewWidget extends StatelessWidget {
   const ListViewWidget({Key? key, required this.list}) : super(key: key);

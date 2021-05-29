@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:search_delegate_demo/core/search/search.dart';
-import 'package:search_delegate_demo/core/widget/listview.dart';
-import './user_view_view_model.dart';
+
+import '../core/search/search.dart';
+import '../core/widget/listview.dart';
+import 'user_view_view_model.dart';
 
 class UserViewView extends UserViewViewModel {
   @override
